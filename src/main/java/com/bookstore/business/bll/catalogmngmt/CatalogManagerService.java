@@ -15,7 +15,7 @@ import jakarta.ejb.Local;
 
 /**
  *
- * @author asbriglio
+ * @author TANKWA PRINCE JORDAN
  */
 @Local
 public interface CatalogManagerService {
