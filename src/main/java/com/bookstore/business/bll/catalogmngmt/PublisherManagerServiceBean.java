@@ -18,6 +18,11 @@ import jakarta.persistence.*;
  *
  * service local de gestion des éditeurs (vue sans interface)
  */
+
+/**
+ *
+ * @author TANKWA PRINCE JORDAN
+ */
 @Stateless(name="PublisherManager")//nom EJB du session bean
 @TransactionManagement(TransactionManagementType.CONTAINER)
 @TransactionAttribute(TransactionAttributeType.MANDATORY)
