@@ -28,6 +28,11 @@ import jakarta.ejb.TransactionManagementType;
  * Composant coarse grained (forte granularité) chargé de la réalisation des processus métiers<br>
  * Expose une vue locale au travers d'une interface métier annotée @Local
  */
+
+/**
+ *
+ * @author TANKWA PRINCE JORDAN
+ */
 @Stateless(name="CatalogManager")
 //options par défaut - on peut se passer de cette anotation - convention over configuration
 @TransactionManagement(TransactionManagementType.CONTAINER)
