@@ -21,6 +21,11 @@ import jakarta.persistence.*;
  * Les méthodes s'exécutent au sein d'une tsx active propagée / créée "par" le client appelant.
  * Les méthodes doivent obligatoirement s'exécuter dans une tsx active cliente.
  */
+
+/**
+ *
+ * @author TANKWA PRINCE JORDAN
+ */
 @Stateless(name="CategoryManager")//nom du stateless 
 //toutes les méthodes doivent s'éxecuter dans une transaction parente
 @TransactionAttribute(TransactionAttributeType.MANDATORY)
