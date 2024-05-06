@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <!-- vue permettant de créer un éditeur-->
+           <h:form>
+
+               <h:panelGrid columns="3">
+                <h:outputLabel value="nom : "/>
+                <!-- invocation de PublisherBean.getPublisher().setName(val input)-->
+                <h:inputText id="nameId" required="true" value="#{publisherBean.publisher.name}"/>
+                <h:message for="nameId"/>
+
+                <h:outputLabel value="Rue : "/>
+                <!-- invocation de PublisherBean.getPublisher().getAddress().setStreet(val input)-->
+                <h:inputText id="streetId" required="true" value="#{publisherBean.publisher.address.street}"/>
+                <h:message for="streetId"/>
+
+                <h:outputLabel value="ville : "/>
+                <h:inputText id="cityId" required="true" value="#{publisherBean.publisher.address.city}"/>
+                <h:message for="cityId"/>
+
+                <h:outputLabel value="Code postal : "/>
+                <h:inputText  id="zpId" required="true" value="#{publisherBean.publisher.address.zp}"/>
+                <h:message for="zpId"/>
+
+                <h:outputLabel value="Pays : "/>
+                <h:inputText id="countryId" required="true" value="#{publisherBean.publisher.address.country}"/>
+                <h:message for="countryId"/>
+
+<!--                 <f:verbatim>&nbsp;</f:verbatim>-->
+                 <h:commandButton value="Créer" action="#{publisherBean.createPublisher}" />     
+            </h:panelGrid>
+
+           </h:form>
+    </h:body>
+</html>
+

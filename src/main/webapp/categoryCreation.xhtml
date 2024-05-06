@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <!-- vue permettant de créer une catégorie -->
+         <h:form>
+            <h:panelGrid columns="2">
+             <!-- bookBean.getBook().getTitle() invoquée -->   
+            Titre catégorie
+            <h:inputText  value="#{categoryBean.catTitle}"/>
+            Description catégorie
+            <h:inputTextarea value="#{categoryBean.desc}"/>  
+            id Catégorie parent
+            <h:inputText value="#{categoryBean.parentId}">
+                <f:validateLongRange minimum = "1"/>
+            </h:inputText>
+<!--            <f:verbatim>&nbsp;</f:verbatim>-->
+            <h:commandButton value="créer" actionListener="#{categoryBean.createCategory}"/>
+            </h:panelGrid>
+            <h:commandLink value="Retour Accueil" action="welcome"/>
+        </h:form>
+        <h2>
+        <!-- balise JSF affichée si la catégorie a été créée (cat non null) -->    
+        <h:outputText value="#{categoryBean.cat.id} #{categoryBean.cat.title} créée" rendered="#{categoryBean.cat!=null}"/>
+        <br/>
+        <!-- balise JSF affichée si la catégorie a été créée (cat non null) et si celle-ci a une catégorie parent -->    
+        <h:outputText value="catégorie parent : #{categoryBean.cat.parentCategory.title}" rendered="#{(categoryBean.cat!=null) and (categoryBean.cat.parentCategory!=null)}"/>
+        </h2>
+    </h:body>
+</html>
+

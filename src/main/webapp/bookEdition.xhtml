@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <!-- vue permettant d'éditer un livre mais aussi  le nom de l'éditeur et la rue du siège de l'éditeur.
+        Cette modification de l'éditeur est fonctionnellement discutable mais cela permet de tester
+        un concept JPA
+        -->
+        <h:form>
+            <h:panelGrid>
+             <!-- bookBean.getBook().getTitle() invoquée -->   
+            <h:outputText  value="#{bookBean.book.title}" rendered="#{!bookBean.updatable}"/>
+            <h:inputText  value="#{bookBean.book.title}" rendered="#{bookBean.updatable}"/>
+            
+            <h:outputText  value="#{bookBean.book.summary}" rendered="#{!bookBean.updatable}"/>
+            <h:inputText  value="#{bookBean.book.summary}" rendered="#{bookBean.updatable}"/>
+            
+            <h:outputText  value="#{bookBean.book.publisher.name}" rendered="#{!bookBean.updatable}"/>
+            <h:inputText  value="#{bookBean.book.publisher.name}" rendered="#{bookBean.updatable}"/>
+            
+            <h:outputText  value="#{bookBean.book.publisher.address.street}" rendered="#{!bookBean.updatable}"/>
+            <!-- bookBean.getBook().getPublisher().getAddress().setStreet(val input) invoquée -->
+            <h:inputText  value="#{bookBean.book.publisher.address.street}" rendered="#{bookBean.updatable}"/>
+            <h:commandButton value="Editer" actionListener="#{bookBean.activeUpdate}" rendered="#{!bookBean.updatable}"/>
+            <h:commandButton value="Mettre à jour" actionListener="#{bookBean.update}" rendered="#{bookBean.updatable}"/>
+            <h:commandLink value="Retour Accueil" action="welcome"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

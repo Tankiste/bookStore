@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <!-- page d'accueil permettant d'accéder aux fonctionnalités de gestion du catalogue -->
+        <h:form>
+            <h:commandLink action="pubCreate" value="Créer un éditeur"/>
+            <br/>
+            <h:commandLink action="associatePub" value="Associer un livre à un éditeur"/>
+            <br/>
+            <h:commandLink action="catCreate" value="Créer une catégorie"/>
+            <br/>
+            <h:commandLink action="bookCreate" value="Créer un livre"/>
+            <br/>
+            <h:commandLink action="associateCat" value="Associer un livre à une catégorie"/>
+            <br/>
+            <h:commandLink action="delete" value="Supprimer un livre"/>
+            <br/>
+            <h:commandLink action="lookup" value="Rechercher des livres"/>
+             <br/>
+            <h:commandLink action="list" value="Lister les catégories"/>
+        </h:form>
+        
+    </h:body>
+</html>
+

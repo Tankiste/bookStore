@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="categoryCreation.xhtml" x="-171" y="424" zoom="true"/>
+        <Node id="search.xhtml" x="387" y="236" zoom="true"/>
+        <Node id="index.xhtml" x="318" y="43" zoom="true"/>
+        <Node id="bookDeletion.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="categories.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="bookCategory.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="publisher.xhtml" x="1006" y="234" zoom="true"/>
+        <Node id="*" x="-56" y="14" zoom="true"/>
+        <Node id="bookPublisher.xhtml" x="411" y="433" zoom="true"/>
+        <Node id="book.xhtml" x="715" y="402" zoom="true"/>
+        <Node id="bookCreation.xhtml" x="594" y="243" zoom="true"/>
+        <Node id="bookCategories.xhtml" x="813" y="292" zoom="true"/>
+        <Node id="bookEdition.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="publisherCreation.xhtml" x="905" y="104" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
