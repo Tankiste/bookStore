@@ -19,7 +19,7 @@ import org.junit.Test;
 
 /**
  *
- * @author Asbriglio
+ * @author TANKWA PRINCE JORDAN
  */
 public class JPAModelingTest {
     
