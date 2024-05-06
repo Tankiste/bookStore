@@ -19,6 +19,11 @@ import jakarta.persistence.*;
  * toutes les méthodes ne spécifiant pas explicitement un autre attribut transactionnel 
  * devront être invoquées dans un contexte transactionnel initié par un appelant.<br>
  */
+
+/**
+ *
+ * @author TANKWA PRINCE JORDAN
+ */
 @Stateless(name="BookManager")
 @TransactionAttribute(TransactionAttributeType.MANDATORY)
 @LocalBean //facultatif
