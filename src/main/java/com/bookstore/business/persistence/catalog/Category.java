@@ -15,7 +15,7 @@ import java.util.List;
  *
  * Entité Category mappée sur la table CATEGORIES<br>
  * Spécifie des requêtes nommées : <br>
- * 1 requête permet de retrouvée les catégories enfants en fonction d'une catégorie parent<br>
+ * 1 requête permet de retrouver les catégories enfants en fonction d'une catégorie parent<br>
  * 1 requête permet de retrouver les catégories racines / sans parents
  */
 @Entity
